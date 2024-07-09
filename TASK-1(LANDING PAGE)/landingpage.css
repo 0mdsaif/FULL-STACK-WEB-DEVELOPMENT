@@ -1,0 +1,228 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f4f4f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    position: relative;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6a00;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url(geometric-abstract-light-blue-background-for-website-wallpapers-bussines-templates-vector.jpg);
+
+}
+
+.hero h1, .hero p {
+    z-index: 1;
+    color: #994f4f;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+.btn {
+    background-color: #ff6a00;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1s ease-out;
+    z-index: 1;
+}
+
+.btn:hover {
+    background-color: #ee0979;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about {
+    background: #f2f2f2;
+    padding: 80px 20px;
+}
+
+.services {
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.service-card {
+    background: #ff6a00;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    flex: 1 1 30%;
+    max-width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    margin: 10px 0;
+}
+
+.contact {
+    background: #f2f2f2;
+    padding: 80px 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #ff6a00;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #ee0979;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
